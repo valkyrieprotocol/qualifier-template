@@ -1,2 +1,2 @@
-# Valkyrie Protocol: Qualifier Base
+# Valkyrie Protocol: Qualifier Template
 
