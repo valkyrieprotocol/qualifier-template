@@ -3,7 +3,7 @@ use std::error::Error;
 use cosmwasm_std::{Env, MessageInfo, Response};
 
 use crate::msgs::InstantiateMsg;
-use crate::tests::{MockDeps, qualifier_creator_sender, qualifier_env};
+use crate::tests::{MockDeps, qualifier_creator_sender, qualifier_env, mock_deps};
 use crate::executions::{qualify, ExecuteResult};
 use valkyrie_qualifier::QualificationMsg;
 
@@ -50,5 +50,8 @@ pub fn will_success(
 
 #[test]
 fn succeed() {
+    let mut deps = mock_deps();
+
+    super::instantiate::default(&mut deps);
     //TODO:
 }
